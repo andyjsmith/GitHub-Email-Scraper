@@ -4,12 +4,43 @@ Scrape GitHub for email addresses associated with a username. Search through pub
 
 ## Requirements
 
--   Python3
+-   Python 3
 -   Requests (`pip3 install requests`)
+
+## Installation
+
+### PIP
+
+```
+pip install github-email-scraper
+```
+
+### Manual install
+
+1. `pip install -r requirements.txt`
+2. `python setup.py install` or `pip install .`
+
+### Standalone
+
+Just run the `github_email_scraper.py` script in the github_email_scraper directory.
 
 ## Usage
 
 Specify a username with `-u` or a file containing usernames (one per line) with `-U`. Choose to either search commits (`--commits`), events (`--events`), or both (`--all`).
+
+Installed
+
+```
+github-email-scraper -u USERNAME --all
+```
+
+Standalone
+
+```
+python github_email_scraper.py -u USERNAME --all
+```
+
+### Full usage
 
 ```
 usage: github_email_scraper.py [-h] (-u USER | -U USER_LIST) [-c] [-e] [-a] [-o] [-n] [-r] [-l AUTH_USER] [-t TOKEN]
